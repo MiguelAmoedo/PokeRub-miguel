@@ -33,7 +33,7 @@ O PokeRub é um aplicativo React Native que permite aos usuários explorar o mun
 
 ## 📱 Screenshots
 
-[Adicionar screenshots do aplicativo aqui]
+
 
 ## 🚀 Como Executar
 
