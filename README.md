@@ -1,139 +1,92 @@
-# PokeRub - @MiguelAmoedo 🎮
+# PokeRub - Aplicativo de Pokémon 🎮
 
-Um aplicativo React Native para explorar o mundo Pokémon, focado na primeira geração (151 Pokémon) ❤️.
+## Sobre o Projeto
 
-## 📱 Funcionalidades
+O PokeRub é um aplicativo React Native que permite aos usuários explorar o mundo Pokémon de forma interativa e divertida. Desenvolvido como um projeto de demonstração, o aplicativo oferece uma experiência rica em recursos para os fãs de Pokémon.
 
-- **Lista de Pokémon**: Visualização dos 151 Pokémon da primeira geração
-- **Detalhes**: Informações detalhadas de cada Pokémon
-- **Busca**: Filtragem por nome
-- **Filtro por Tipo**: Seleção de Pokémon por tipo com emojis
-- **Favoritos**: Sistema para salvar Pokémon favoritos
-- **Evoluções**: Visualização da cadeia evolutiva
+## 🎯 Histórias de Usuário Implementadas
+
+1. **Visualização de Pokémon**
+   - Lista completa dos 151 primeiros Pokémon ❤️
+   - Detalhes individuais de cada Pokémon
+   - Imagens e informações básicas
+   - Filtro por tipo de Pokémon
+
+2. **Sistema de Favoritos**
+   - Adicionar/remover Pokémon dos favoritos
+   - Tela dedicada para visualizar favoritos
+   - Persistência de dados usando AsyncStorage
+
+3. **Navegação Intuitiva**
+   - Navegação entre telas de forma fluida
+   - Detalhes completos de cada Pokémon
+   - Interface amigável e responsiva
 
 ## 🛠️ Tecnologias Utilizadas
 
 - React Native
 - TypeScript
 - React Navigation
-- AsyncStorage
-- Axios
-- PokéAPI
+- Axios para requisições HTTP
+- AsyncStorage para persistência local
+- PokéAPI como fonte de dados
 
-## 📋 Pré-requisitos
+## 📱 Screenshots
 
-- Node.js
-- JDK 11 ou superior
-- Android Studio
-- Variáveis de ambiente configuradas (ANDROID_HOME, JAVA_HOME)
+[Adicionar screenshots do aplicativo aqui]
 
-## 🚀 Instalação
+## 🚀 Como Executar
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/PokeRub.git
-cd PokeRub
-```
+1. **Pré-requisitos**
+   - Node.js
+   - JDK 11 ou superior
+   - Android Studio
+   - Variáveis de ambiente configuradas (ANDROID_HOME, JAVA_HOME)
 
-2. Instale as dependências:
-```bash
-npm install
-```
+2. **Instalação**
+   ```bash
+   # Clone o repositório
+   git clone https://github.com/MiguelAmoedo/PokeRub-miguel.git
 
-3. Inicie o Metro Bundler:
-```bash
-npx react-native start
-```
+   # Entre no diretório
+   cd PokeRub
 
-4. Em outro terminal, execute o aplicativo:
-```bash
-npx react-native run-android
-```
+   # Instale as dependências
+   npm install
 
-## 📁 Estrutura do Projeto
+   # Execute o aplicativo
+   npx react-native run-android
+   ```
 
-```
-PokeRub/
-├── src/
-│   ├── components/     # Componentes reutilizáveis
-│   ├── screens/        # Telas do aplicativo
-│   ├── services/       # Serviços e APIs
-│   ├── hooks/          # Custom hooks
-│   └── types/          # Definições de tipos TypeScript
-├── App.tsx            # Componente principal
-└── package.json       # Dependências do projeto
-```
+## 💭 Observações do Desenvolvimento
 
-## 🎯 Funcionalidades Detalhadas
+### Desafios Enfrentados
 
-### Lista de Pokémon
-- Exibição dos 151 Pokémon da primeira geração
-- Número do Pokémon (#001, #002, etc.)
-- Imagem do Pokémon
-- Tipos do Pokémon
-- Botão de favoritos
+1. **Configuração do Ambiente**
+   - A configuração inicial do ambiente React Native sem Expo foi um desafio, especialmente com as variáveis de ambiente do Android.
+   - A documentação oficial poderia ser mais clara em alguns aspectos.
 
-### Busca e Filtros
-- Busca por nome
-- Filtro por tipo com emojis:
-  - ⚪ Normal
-  - 🔥 Fogo
-  - 💧 Água
-  - ⚡ Elétrico
-  - 🌱 Planta
-  - ❄️ Gelo
-  - 👊 Lutador
-  - ☠️ Veneno
-  - 🏔️ Terra
-  - 🦅 Voador
-  - 🧠 Psíquico
-  - 🐛 Inseto
-  - 🪨 Pedra
-  - 👻 Fantasma
-  - 🐉 Dragão
-  - 🌑 Sombrio
-  - ⚙️ Aço
-  - ✨ Fada
+2. **Tipagem TypeScript**
+   - A implementação de tipos para a PokéAPI foi um processo iterativo, já que a API retorna dados complexos.
+   - A necessidade de criar interfaces personalizadas para melhor tipagem dos dados.
 
-### Detalhes do Pokémon
-- Imagem
-- Nome e número
-- Tipos
-- Características (altura, peso)
-- Habilidades
-- Cadeia de evolução
+3. **Geração do APK**
+   - O processo de geração do APK de release apresentou alguns desafios com a configuração do keystore.
+   - A documentação sobre o processo de assinatura poderia ser mais detalhada.
 
-### Favoritos
-- Adicionar/remover Pokémon dos favoritos
-- Lista de favoritos persistente
-- Navegação rápida para detalhes
+### Aprendizados
 
-## 🔄 Fluxo de Navegação
+1. **Melhorias na Arquitetura**
+   - A separação clara de responsabilidades usando hooks personalizados.
+   - A importância de uma boa estrutura de tipos no TypeScript.
 
-1. **Tela Inicial (Home)**
-   - Lista de Pokémon
-   - Busca por nome
-   - Filtro por tipo
-   - Botão de favoritos
+2. **Performance**
+   - A implementação de lazy loading para imagens.
+   - A otimização de re-renderizações usando useMemo e useCallback.
 
-2. **Tela de Detalhes**
-   - Informações completas do Pokémon
-   - Botão de favoritos
-   - Cadeia de evolução
+## 📝 Notas Adicionais
 
-3. **Tela de Favoritos**
-   - Lista de Pokémon favoritos
-   - Navegação para detalhes
-   - Opção de remover dos favoritos
+- O projeto foi desenvolvido como uma demonstração de habilidades em React Native.
+- A escolha da PokéAPI foi feita devido à sua riqueza de dados e facilidade de uso.
+- O design foi pensado para ser intuitivo e agradável visualmente.
 
-## 🎨 Interface
-
-- Design moderno e intuitivo
-- Cores temáticas para cada tipo de Pokémon
-- Emojis para identificação visual dos tipos
-- Layout responsivo e adaptável
-
-## 📱 Compatibilidade
-
-- Android 5.0 (API 21) ou superior
-- Testado em diferentes tamanhos de tela
