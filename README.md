@@ -1,97 +1,139 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# PokeRub - @MiguelAmoedo 🎮
 
-# Getting Started
+Um aplicativo React Native para explorar o mundo Pokémon, focado na primeira geração (151 Pokémon) ❤️.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📱 Funcionalidades
 
-## Step 1: Start Metro
+- **Lista de Pokémon**: Visualização dos 151 Pokémon da primeira geração
+- **Detalhes**: Informações detalhadas de cada Pokémon
+- **Busca**: Filtragem por nome
+- **Filtro por Tipo**: Seleção de Pokémon por tipo com emojis
+- **Favoritos**: Sistema para salvar Pokémon favoritos
+- **Evoluções**: Visualização da cadeia evolutiva
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🛠️ Tecnologias Utilizadas
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native
+- TypeScript
+- React Navigation
+- AsyncStorage
+- Axios
+- PokéAPI
 
-```sh
-# Using npm
-npm start
+## 📋 Pré-requisitos
 
-# OR using Yarn
-yarn start
+- Node.js
+- JDK 11 ou superior
+- Android Studio
+- Variáveis de ambiente configuradas (ANDROID_HOME, JAVA_HOME)
+
+## 🚀 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/PokeRub.git
+cd PokeRub
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+2. Instale as dependências:
+```bash
+npm install
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+3. Inicie o Metro Bundler:
+```bash
+npx react-native start
 ```
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
+4. Em outro terminal, execute o aplicativo:
+```bash
+npx react-native run-android
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+## 📁 Estrutura do Projeto
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```
+PokeRub/
+├── src/
+│   ├── components/     # Componentes reutilizáveis
+│   ├── screens/        # Telas do aplicativo
+│   ├── services/       # Serviços e APIs
+│   ├── hooks/          # Custom hooks
+│   └── types/          # Definições de tipos TypeScript
+├── App.tsx            # Componente principal
+└── package.json       # Dependências do projeto
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 🎯 Funcionalidades Detalhadas
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Lista de Pokémon
+- Exibição dos 151 Pokémon da primeira geração
+- Número do Pokémon (#001, #002, etc.)
+- Imagem do Pokémon
+- Tipos do Pokémon
+- Botão de favoritos
 
-## Step 3: Modify your app
+### Busca e Filtros
+- Busca por nome
+- Filtro por tipo com emojis:
+  - ⚪ Normal
+  - 🔥 Fogo
+  - 💧 Água
+  - ⚡ Elétrico
+  - 🌱 Planta
+  - ❄️ Gelo
+  - 👊 Lutador
+  - ☠️ Veneno
+  - 🏔️ Terra
+  - 🦅 Voador
+  - 🧠 Psíquico
+  - 🐛 Inseto
+  - 🪨 Pedra
+  - 👻 Fantasma
+  - 🐉 Dragão
+  - 🌑 Sombrio
+  - ⚙️ Aço
+  - ✨ Fada
 
-Now that you have successfully run the app, let's make changes!
+### Detalhes do Pokémon
+- Imagem
+- Nome e número
+- Tipos
+- Características (altura, peso)
+- Habilidades
+- Cadeia de evolução
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Favoritos
+- Adicionar/remover Pokémon dos favoritos
+- Lista de favoritos persistente
+- Navegação rápida para detalhes
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🔄 Fluxo de Navegação
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+1. **Tela Inicial (Home)**
+   - Lista de Pokémon
+   - Busca por nome
+   - Filtro por tipo
+   - Botão de favoritos
 
-## Congratulations! :tada:
+2. **Tela de Detalhes**
+   - Informações completas do Pokémon
+   - Botão de favoritos
+   - Cadeia de evolução
 
-You've successfully run and modified your React Native App. :partying_face:
+3. **Tela de Favoritos**
+   - Lista de Pokémon favoritos
+   - Navegação para detalhes
+   - Opção de remover dos favoritos
 
-### Now what?
+## 🎨 Interface
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+- Design moderno e intuitivo
+- Cores temáticas para cada tipo de Pokémon
+- Emojis para identificação visual dos tipos
+- Layout responsivo e adaptável
 
-# Troubleshooting
+## 📱 Compatibilidade
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Android 5.0 (API 21) ou superior
+- Testado em diferentes tamanhos de tela
