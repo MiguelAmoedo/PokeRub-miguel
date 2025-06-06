@@ -32,8 +32,9 @@ O PokeRub é um aplicativo React Native que permite aos usuários explorar o mun
 - PokéAPI como fonte de dados
 
 ## 📱 Screenshots
-https://drive.google.com/file/d/1po9b2iqEKbzXNeLpEubgxpTKWoZ_a0SM/view?usp=sharing
-https://drive.google.com/file/d/1SV5t4_Wx-CMYebZ7V_qaAWIMfu4HxczX/view?usp=sharing
+- https://drive.google.com/file/d/1po9b2iqEKbzXNeLpEubgxpTKWoZ_a0SM/view?usp=sharing
+
+- https://drive.google.com/file/d/1SV5t4_Wx-CMYebZ7V_qaAWIMfu4HxczX/view?usp=sharing
 
 
 ## 🚀 Como Executar
